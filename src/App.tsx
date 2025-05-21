@@ -1,11 +1,12 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import AnnouncementBanner from './components/AnnouncementBanner';
-import DataExploration from './components/DataExploration';
-import WorkflowsSection from './components/WorkflowsSection';
-import TrustedBySection from './components/TrustedBySection';
-import DashboardSection from './components/DashboardSection';
-import CtaSection from './components/CtaSection';
+import Navbar from './components/Navbar.tsx';
+import AnnouncementBanner from './components/AnnouncementBanner.tsx';
+import DataExploration from './components/DataExploration.tsx';
+import WorkflowsSection from './components/WorkflowsSection.tsx';
+import TrustedBySection from './components/TrustedBySection.tsx';
+import DashboardSection from './components/DashboardSection.tsx';
+import CtaSection from './components/CtaSection.tsx';
+import DataPlatformComponent from './components/DataPlatformComponent.tsx';
 
 function App() {
   return (
@@ -15,14 +16,20 @@ function App() {
       <Navbar />
       <main>
         {/* <HeroSection /> */}
+        <CtaSection />
         <DataExploration />
         <WorkflowsSection />
         <TrustedBySection />
         <DashboardSection />
-        <CtaSection />
+        <DataPlatformComponent/>
+       
       </main>
     </div>
   );
 }
 
 export default App;
+
+
+
+
