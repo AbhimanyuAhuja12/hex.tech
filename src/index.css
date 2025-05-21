@@ -1,1 +1,124 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+/* Font import */
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  font-display: swap;
+}
+
+/* Custom variables */
+:root {
+  --hex-dark: #161618;
+  --hex-darker: #0f0f11;
+  --hex-pink: #f8c4b4;
+  --hex-light: #f5f5f7;
+}
+
+/* Base styles */
+html {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--hex-dark);
+  color: white;
+}
+
+/* Custom component classes */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 16rem;
+  background-color: var(--hex-darker);
+  border-radius: 0.375rem;
+  padding: 1rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transform: scale(0.95);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-out;
+}
+
+.dropdown:hover .dropdown-menu {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.nav-link:hover {
+  color: var(--hex-pink);
+}
+
+.button-primary {
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--hex-pink);
+  color: var(--hex-pink);
+  border-radius: 0.375rem;
+  transition-property: color, background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.button-primary:hover {
+  background-color: var(--hex-pink);
+  color: var(--hex-darker);
+}
+
+.button-outlined {
+  padding: 0.5rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 0.375rem;
+  transition-property: border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.button-outlined:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.code-block {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0.375rem;
+  padding: 1rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875rem;
+}
+
+.data-table {
+  width: 100%;
+  text-align: left;
+}
+
+.data-table th {
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  color: rgb(156 163 175);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.data-table td {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
